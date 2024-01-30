@@ -1,0 +1,25 @@
+USE Northwind 
+
+GO
+
+
+
+CREATE FUNCTION F01_PrecioPromedio() RETURNS DECIMAL
+
+AS
+
+BEGIN
+
+
+
+DECLARE @Promedio DECIMAL
+
+SELECT 
+
+ @Promedio=AVG(UnitPrice)
+
+FROM PRODUCTS 
+
+RETURN @Promedio
+
+END
